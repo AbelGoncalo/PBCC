@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Agencia;
+use App\Models\Agente;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -12,8 +12,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $agentes = Agencia::orderBy('id','desc')->get();
-        return view('pages.welcome',compact('agentes'));
+        $agentes = Agente::orderBy('id','desc')->get();
+        return view('livewire.home.pages.home',compact('agentes'));
     }
 
     /**

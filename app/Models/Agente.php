@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\{Model,SoftDeletes};
 
-class Agencia extends Model
+class Agente extends Model
 {
     use HasFactory,SoftDeletes;
-    protected $table = 'agencias';
+    protected $table = 'agentes';
     protected $primaryKey = 'id';
     protected $fillable = [
         'user_id',

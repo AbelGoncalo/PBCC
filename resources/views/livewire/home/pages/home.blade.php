@@ -1,8 +1,26 @@
-@extends('layouts.main')
+@extends('layouts.home.app')
 @section('title','Agente Bancário')
 @section('content')
     <!-- Section Location -->
 <section class="card-location">
+   <!-- Modal -->
+   <div class="modal fade" id="exampleModal"  aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <div class="container mb-5" data-aos="fade-up">
       <div class="w-100 d-md-flex justify-content-center align-items-center gap-3 ">
@@ -146,13 +164,13 @@
               </div>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="assets/img/features-light-1.jpg" class="rounded-2 d-block w-100" alt="...">
+                  <img src="home/img/features-light-1.jpg" class="rounded-2 d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                  <img src="assets/img/features-light-2.jpg" class="rounded-2 d-block w-100" alt="...">
+                  <img src="home/img/features-light-2.jpg" class="rounded-2 d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                  <img src="assets/img/features-light-3.jpg" class="rounded-2 d-block w-100" alt="...">
+                  <img src="home/img/features-light-3.jpg" class="rounded-2 d-block w-100" alt="...">
                 </div>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

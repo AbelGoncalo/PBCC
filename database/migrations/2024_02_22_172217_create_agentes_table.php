@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('agencias', function (Blueprint $table) {
+        Schema::create('agentes', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(\App\Models\User::class);
             $table->string('descricao');
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('agencias');
+        Schema::dropIfExists('agentes');
     }
 };
