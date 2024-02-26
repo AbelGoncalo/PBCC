@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Agente;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
 
@@ -18,11 +19,11 @@ class ServicoFactory extends Factory
     public function definition(): array
     {
         return [
-            'agente_id',
-            'descricao',
-            'levantar',
-            'reservar',
-            'depositar',
+            'agente_id'=>Agente::all()->random()->id,
+            'descricao'=>fake()->name(),
+            'levantar'=>fake()->boolean(),
+            'reservar'=>fake()->boolean(),
+            'depositar'=>fake()->boolean(),
         ];
     }
 }
