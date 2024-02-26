@@ -28,7 +28,12 @@
   <!-- Template Main CSS File -->
   <link href="{{asset('home/css/main.css')}}" rel="stylesheet">
   <!-- Option 1: Include in HTML -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+
+  {{-- TimePicker CSS --}}
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+
 
 </head>
 
@@ -216,8 +221,24 @@
   <script src="{{asset('/home/vendor/aos/aos.js')}}"></script>
   <script src="{{asset('/home/vendor/php-email-form/validate.js')}}"></script>
 
+  {{-- JQuery --}}
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(
+      function () {
+        alert("Funciona")
+      }
+    )
+  </script>
+
+   {{-- TimePicker JS --}}
+   <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+
   <!-- Template Main JS File -->
   <script src="{{asset('/home/js/main.js')}}"></script>
+
+  @stack('timepicker')
 
 </body>
 

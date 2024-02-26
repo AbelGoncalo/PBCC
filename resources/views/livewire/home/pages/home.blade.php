@@ -1,26 +1,11 @@
 @extends('layouts.home.app')
 @section('title','Agente Bancário')
 @section('content')
-    <!-- Section Location -->
+
+<!-- Section Location -->
 <section class="card-location">
-   <!-- Modal -->
-   <div class="modal fade" id="exampleModal"  aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
+
+  @include('livewire.home.pages.modals.modal-delivery')
 
     <div class="container mb-5" data-aos="fade-up">
       <div class="w-100 d-md-flex justify-content-center align-items-center gap-3 ">
@@ -189,8 +174,17 @@
                 <li><i class="bi-check-lg"></i> <span>Reservar Levantamento</span></li>
                 <li><i class="bi-check-lg"></i> <span>Depositar Dinheiro</span></li>
               </ul>
-              <a class="btn">Direcção <i class="bi bi-geo-alt-fill"></i> </a>
-              <a class="btn">Marcar Reserva <i class="bi bi-clipboard-fill"></i> </a>
+              <div class="d-flex gap-2">
+                <a class="btn w-100 btn-agent">
+                  Direcção <i class="bi bi-geo-alt-fill"></i>
+                </a>
+
+                <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn w-100 btn-agent">
+                  Marcar Reserva <i class="bi bi-clipboard-fill"></i>
+                </button>
+
+                @include('livewire.home.pages.modals.modal-reservation')
+              </div>
             </div>
             <div class="badge-style text-bg-success">
               <span class="d-none">scp</span>
@@ -369,4 +363,25 @@
 
   </section>
   <!-- End Section Location -->
+
+  @push('timepicker')
+    <script>
+
+      $(document).ready(function(){
+        $('.timevalidate').timepicker({
+            timeFormat: 'h:mm p',
+            interval: 30,
+            minTime: '10',
+            maxTime: '6:00pm',
+            defaultTime: '11',
+            startTime: '10:00',
+            dynamic: false,
+            dropdown: true,
+            scrollbar: true
+        });
+      });
+
+    </script>
+  @endpush
+
 @endsection

@@ -543,7 +543,7 @@ section {
   opacity: 0;
   right: 40px;
   bottom: 40px;
-  z-index: 99999;
+  z-index: 999;
   background-color: var(--primary-color);
   width: 40px;
   height: 40px;
@@ -2902,7 +2902,7 @@ section {
   color: #444444;
 }
 
-.card-location .card-body a {
+.card-location .card-body .btn-agent {
   font-size: 13px;
   background-color: var(--primary-color);
   color: #ffffff;
@@ -3002,6 +3002,19 @@ section {
   box-shadow: none;
 }
 
+/* Modal de Reserva */
+.modal-reservation input,
+.modal-reservation label {
+  font-size: 14px;
+}
+
+.btn-modal-reservation {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  font-size: 14px;
+}
+
+
 
 /* Map-Top Styles */
 .map-top {
@@ -3009,7 +3022,7 @@ section {
   left: 50%;
   transform: translate(-50%, -50%);
   bottom: 10px;
-  z-index: 99999;
+  z-index: 999;
   background-color: #212529;
   transition: all 0.4s;
   color: #f4f4f4;
@@ -3023,7 +3036,6 @@ section {
     left: 100px;
   }
 }
-
 
 @media screen and (max-width: 765px) {
   .cad-company {
