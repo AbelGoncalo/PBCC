@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Agencia>
  */
-class AgenciaFactory extends Factory
+class AgenteFactory extends Factory
 {
     /**
      * Define the model's default state.

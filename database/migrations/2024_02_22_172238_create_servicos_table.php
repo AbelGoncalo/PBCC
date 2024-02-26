@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('servicos', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(\App\Models\Agencia::class);
+            $table->foreignIdFor(\App\Models\Agente::class);
             $table->string('descricao')->default('0');
             $table->boolean('levantar')->default('0');
             $table->boolean('reservar')->default('0');

@@ -2,7 +2,7 @@
 
 namespace Database\Factories;
 
-use App\Models\Agencia;
+use App\Models\Agente;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,7 +18,7 @@ class GaleriaFactory extends Factory
     public function definition(): array
     {
         return [
-            'agencia_id'=>Agencia::all()->random()->id,
+            'agente_id'=>Agente::all()->random()->id,
             'descricao'=>fake()->name(),
         ];
     }
